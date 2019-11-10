@@ -1,5 +1,6 @@
 // Import flutter helper library
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' show get;
 
 // create a class that will be our custom widget
 
@@ -16,7 +17,8 @@ class AppState extends State<App> {
   int counter = 0;
 
   void fetchImage() {
-
+    counter += 1;
+    get('http://jsonplaceholder.typicode.com/photos/$counter');
   }
 
   // @override
